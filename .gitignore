@@ -1,0 +1,6 @@
+bin
+include
+venv
+lib
+.pyc
+.Python
