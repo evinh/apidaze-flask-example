@@ -1,5 +1,5 @@
 # Example Flask application for Apidaze
-git clone
+git clone https://github.com/evinh/apidaze-flask-example.git
 
 cd apidaze-flask-example
 
