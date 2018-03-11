@@ -19,4 +19,4 @@ API Docs for Apidaze:
 https://vi-api.trybelabs.com
 
 
-You can publish this to the web for testing by running it on Heroku or Dokku using a Procfile
+You can publish this to the web for testing by running it on Heroku or Dokku.
