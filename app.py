@@ -13,12 +13,13 @@ env = Environment()
 
 app = Flask(__name__, static_url_path = "/static", static_folder = "static")
 Bootstrap(app)
-#timestamp = str(datetime.datetime.now())
 
 ### apidaze Config
 base_url = "https://api4.apidaze.io/"
 
-## Demo Variables
+## Demo Variables THIS IS INSECURE, FOR TESTING ONLY!!!
+## These are only required if you add in using the REST API
+## You can leave as is otherwise
 api_key = "<YOUR API KEY>"
 api_secret = "<YOUR API SECRET>"
 number = "<YOUR APIDAZE NUMBER>"
@@ -31,10 +32,13 @@ def inbound_sms(rec_name):
     url = request.url
     app_url = request.host_url
     this_url = request.base_url
-    fromnumber = str(request.args.get('caller_id_number'))
-    tonumber = request.args.get('destination_number')
+    args = json.loads(request.get_data())
+    fromnumber = str(args['caller_id_number'])
+    tonumber = str(args['destination_number'])
+    text = args['text']
     ts = int(time.time())
-    return url
+    print text
+    return "received"
 
 @app.route('/recieveCall')
 def inbound_call():
