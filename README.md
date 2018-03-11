@@ -1,7 +1,11 @@
 # Simple Flask application to get started using Apidaze.
 
-Requirements:  Python 2.7, a command line, a basic knowledge of Python.
+## Requirements:  
+- Python 2.7
+- a command line
+- a basic knowledge of Python.
 
+## Install and run
 git clone https://github.com/evinh/apidaze-flask-example.git
 
 cd apidaze-flask-example
@@ -15,7 +19,8 @@ pip install -r requirements.txt (just in case)
 To run:  python app.py
 
 
-API Docs for Apidaze:
+## API Docs for Apidaze:
+
 https://vi-api.trybelabs.com
 
 
