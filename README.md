@@ -20,6 +20,8 @@ template = render_template('call.xml', some_variable=example_variable) -- replac
 
 For inbound SMS, the call flow is the same, however the SMS sent from Apidaze is a POST with JSON as the content.  To just receive SMS and not calls, you can set your URL in Apidaze as the same for calls, but /receiveSMS instead of /receiveCall at the end of your URL.  To receive both SMS and Calls, you'll need to update the receiveCall function in app.py to accept POST and also look for the Content-Type of JSON, then process accordingly.  This is easily done with an "if" statement.
 
+To understand what parameters are sent in the request from Apidaze, please reference the documentation here: https://vi-api.trybelabs.com/#b40d88a9-d9b8-4c53-b5c1-e51ec76b584c
+
 ## Install and run
 git clone https://github.com/evinh/apidaze-flask-example.git
 
