@@ -5,6 +5,17 @@
 - a command line
 - a basic knowledge of Python.
 
+## How it works with Apidaze
+
+For Inbound calls, add the "External Script" URL of your application with /receiveCall at the end. Example: http://yourappurl/recieveCall.  You can do this via the VoIP Innovations portal.  Make sure to add a phone number to it in the VoIP Innovations portal.  https://backoffice.voipinnovations.com
+
+Call Flow:
+
+Inbound Call -> GET request to your app with URL params of the call detail -> Your app generates the response based on the app generating the XML response based on the call.xml template found in the templates directory.
+
+In this example, there are no variables being used in the call.xml template, but you can pass in variables in the receiveCall function in app.py... you can see an example there in this line, where it renders the template:  
+template = render_template('call.xml', some_variable=example_variable) -- replace "some_variable" with whatever you want to pass, then you can use {{some_variable}} in the call.xml template to render that dynamic variable.
+
 ## Install and run
 git clone https://github.com/evinh/apidaze-flask-example.git
 
