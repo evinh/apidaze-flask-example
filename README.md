@@ -18,6 +18,8 @@ Inbound Call -> GET request to your app with URL params of the call detail -> Yo
 In this example, there are no variables being used in the call.xml template, but you can pass in variables in the receiveCall function in app.py... you can see an example there in this line, where it renders the template:  
 template = render_template('call.xml', some_variable=example_variable) -- replace "some_variable" with whatever you want to pass, then you can use {{some_variable}} in the call.xml template to render that dynamic variable.
 
+For inbound SMS, the call flow is the same, however the SMS sent from Apidaze is a POST with JSON as the content.  To just receive SMS and not calls, you can set your URL in Apidaze as the same for calls, but /receiveSMS instead of /receiveCall at the end of your URL.  To receive both SMS and Calls, you'll need to update the receiveCall function in app.py to accept POST and also look for the Content-Type of JSON, then process accordingly.  This is easily done with an "if" statement.
+
 ## Install and run
 git clone https://github.com/evinh/apidaze-flask-example.git
 
