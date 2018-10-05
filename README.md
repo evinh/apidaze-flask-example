@@ -7,7 +7,9 @@
 
 ## How it works with Apidaze
 
-For Inbound calls, add the "External Script" URL of your application with /receiveCall at the end. Example: http://yourappurl/recieveCall.  You can do this via the VoIP Innovations portal.  Make sure to add a phone number to it in the VoIP Innovations portal.  https://backoffice.voipinnovations.com
+Clone, modify, and deploy this example application to a publicly accessible server. Instructions below under "Install and run".
+
+For Inbound calls, add the "External Script" URL of your application (this example application wherever you deploy it) with /receiveCall at the end. Example: http://yourappurl/recieveCall.  You can do this via the VoIP Innovations portal.  Make sure to add a phone number to it in the VoIP Innovations portal.  https://backoffice.voipinnovations.com
 
 Call Flow:
 
